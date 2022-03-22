@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class GroupPage extends StatelessWidget {
-  const GroupPage({Key? key}) : super(key: key);
+class ClassPage extends StatelessWidget {
+  const ClassPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        "Group",
+        "Class",
       ),
     );
   }
