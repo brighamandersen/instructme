@@ -16,6 +16,7 @@ class InstructMeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'instruct.me',
       theme: ThemeData(
         primarySwatch: Colors.green,
