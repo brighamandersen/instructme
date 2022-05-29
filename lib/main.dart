@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:instructme/calendar.dart';
 import 'package:instructme/classes_groups.dart';
 import 'package:instructme/dashboard.dart';
 import 'package:instructme/group.dart';
 import 'package:instructme/messages.dart';
 import 'package:instructme/notifications.dart';
 import 'package:instructme/profile.dart';
+import 'package:instructme/utils/theme.dart';
 
 void main() {
   runApp(const InstructMeApp());
@@ -39,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
   static const List<Widget> _routesList = <Widget>[
+    CalendarPage(),
     DashboardPage(),
     ClassesGroupsPage(),
     MessagesPage(),
@@ -71,6 +74,10 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_month),
+            label: 'Calendar',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
             label: 'Dashboard',
           ),
@@ -92,8 +99,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
         currentIndex: _selectedIndex,
-        unselectedItemColor: Colors.grey,
-        selectedItemColor: Colors.green[800],
+        unselectedItemColor: THEME_SECONDARY,
+        selectedItemColor: THEME_PRIMARY,
         onTap: _onItemTapped,
       ),
     );
