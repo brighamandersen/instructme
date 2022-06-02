@@ -1,5 +1,59 @@
 import 'package:flutter/material.dart';
+import 'package:instructme/models/event_model.dart';
+import 'package:instructme/utils/helpers.dart';
 import 'package:instructme/utils/theme.dart';
+
+class DetailsRow extends StatelessWidget {
+  const DetailsRow(
+      {Key? key,
+      required this.weekStart,
+      required this.weekEnd,
+      required this.date})
+      : super(key: key);
+
+  final num weekStart;
+  final num weekEnd;
+  final num date;
+
+  Column getContent() {
+    List<EventModel> events = getEventsOnDate(date);
+    if (events.isEmpty) {
+      return Column(children: const [Text('No events on this day')]);
+    }
+    List<Widget> list = <Widget>[];
+    events.forEach((event) {
+      list.add(Row(children: [Text(event.name + ' @ ' + event.time)]));
+    });
+    // return list;
+
+    return Column(children: list);
+    // return Column(children: [
+    //   Row(children: [Text('hello')]),
+    //   Row(children: [Text('world')])
+    // ]);
+    // for (var i = 0; i < events.length; i++) {
+    //   list.add(new Text(strings[i]));
+    // }
+    // return new Row(children: list);
+    // return Text(events[0].name);
+  }
+
+  bool isVisible() {
+    return weekStart <= date && date <= weekEnd;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (!isVisible()) return const SizedBox.shrink();
+
+    return Container(
+        color: THEME_NAVBAR_SURFACE,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [getContent()],
+        ));
+  }
+}
 
 class CalendarDay extends StatelessWidget {
   const CalendarDay({
@@ -68,6 +122,10 @@ class _CalendarPageState extends State<CalendarPage> {
     return date == _activeDate;
   }
 
+  bool activeDateIsWithinWeek(start, end) {
+    return start <= _activeDate && _activeDate <= end;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -111,6 +169,7 @@ class _CalendarPageState extends State<CalendarPage> {
                   active: isDateActive(8),
                   onTap: () => onDayTap(8)),
             ]),
+            DetailsRow(weekStart: 2, weekEnd: 8, date: _activeDate),
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
               CalendarDay(
                   weekday: 'mon',
@@ -148,6 +207,7 @@ class _CalendarPageState extends State<CalendarPage> {
                   active: isDateActive(15),
                   onTap: () => onDayTap(15)),
             ]),
+            DetailsRow(weekStart: 9, weekEnd: 15, date: _activeDate),
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
               CalendarDay(
                   weekday: 'mon',
@@ -185,6 +245,7 @@ class _CalendarPageState extends State<CalendarPage> {
                   active: isDateActive(22),
                   onTap: () => onDayTap(22)),
             ]),
+            DetailsRow(weekStart: 16, weekEnd: 22, date: _activeDate),
             Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
               CalendarDay(
                   weekday: 'mon',
@@ -222,6 +283,7 @@ class _CalendarPageState extends State<CalendarPage> {
                   active: isDateActive(29),
                   onTap: () => onDayTap(29)),
             ]),
+            DetailsRow(weekStart: 23, weekEnd: 29, date: _activeDate),
           ],
         ));
   }
