@@ -3,6 +3,7 @@ import 'package:instructme/models/event_model.dart';
 import 'package:instructme/utils/constants.dart';
 import 'package:instructme/utils/helpers.dart';
 import 'package:instructme/utils/theme.dart';
+import 'package:badges/badges.dart';
 
 class DetailsRow extends StatelessWidget {
   const DetailsRow(
@@ -95,24 +96,28 @@ class CalendarDay extends StatelessWidget {
                   )
                 : null,
             margin: const EdgeInsets.all(2.0),
-            child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(children: [
-                  Text(weekday.toUpperCase(),
-                      style: TextStyle(
-                          color: active
-                              ? THEME_NAVBAR_SURFACE
-                              : THEME_SECONDARY_DARKEST)),
-                  Text(
-                    date.toString(),
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20.0,
-                        color: active
-                            ? THEME_NAVBAR_SURFACE
-                            : THEME_SECONDARY_DARKEST),
-                  )
-                ]))));
+            child: Badge(
+                badgeColor: active ? THEME_NAVBAR_SURFACE : THEME_SECONDARY,
+                badgeContent: Text(getEventsOnDate(date).length.toString()),
+                showBadge: getEventsOnDate(date).isNotEmpty,
+                child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(children: [
+                      Text(weekday.toUpperCase(),
+                          style: TextStyle(
+                              color: active
+                                  ? THEME_NAVBAR_SURFACE
+                                  : THEME_SECONDARY_DARKEST)),
+                      Text(
+                        date.toString(),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20.0,
+                            color: active
+                                ? THEME_NAVBAR_SURFACE
+                                : THEME_SECONDARY_DARKEST),
+                      )
+                    ])))));
   }
 }
 

@@ -5,10 +5,12 @@ import 'package:instructme/models/event_model.dart';
 import 'package:instructme/utils/theme.dart';
 
 List<EventModel> ALL_EVENTS = [
-  EventModel('Production Design', 3, '10:00 AM'),
-  EventModel('Acting', 3, '2:00 PM'),
-  EventModel('Cinematography', 3, '5:00 PM'),
-  EventModel('Sound', 5, '9:00 AM'),
+  EventModel('Production Design', 11, '10:00 AM'),
+  EventModel('Acting', 11, '2:00 PM'),
+  EventModel('Cinematography', 11, '5:00 PM'),
+  EventModel('Sound', 14, '9:00 AM'),
+  EventModel('Stage Design', 24, '11:00 AM'),
+  EventModel('Lighting', 27, '9:00 PM'),
 ];
 
 const lightText = TextStyle(
