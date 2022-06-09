@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instructme/class.dart';
-import 'package:instructme/group.dart';
+// import 'package:instructme/group.dart';
 
 class ClassesGroupsPage extends StatelessWidget {
   const ClassesGroupsPage({Key? key}) : super(key: key);
@@ -30,29 +30,27 @@ class ClassesGroupsPage extends StatelessWidget {
     return ListView(
       children: const <Widget>[
         Card(
-          child: ListTile(
-            leading: Icon(Icons.accessibility),
-            title: Text("Welding"),
-            subtitle: Text("Within Provo Boyz Group  |  Last active 2 hours ago"),
-            trailing: Icon(Icons.keyboard_arrow_right)
-          )
-        ),
+            child: ListTile(
+                leading: Icon(Icons.accessibility),
+                title: Text("Welding"),
+                subtitle:
+                    Text("Within Provo Boyz Group  |  Last active 2 hours ago"),
+                trailing: Icon(Icons.keyboard_arrow_right))),
         Card(
-          child: ListTile(
-            leading: Icon(Icons.accessibility),
-            title: Text("Coding Basics"),
-            subtitle: Text("Within BYU Study Group  |  Last active 12 hours ago"),
-            trailing: Icon(Icons.keyboard_arrow_right),
-          )
-        ),
+            child: ListTile(
+          leading: Icon(Icons.accessibility),
+          title: Text("Coding Basics"),
+          subtitle: Text("Within BYU Study Group  |  Last active 12 hours ago"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+        )),
         Card(
-          child: ListTile(
-            leading: Icon(Icons.accessibility),
-            title: Text("Pottery"),
-            subtitle: Text("Within Generic Community Group  |  Last active 3 hours ago"),
-            trailing: Icon(Icons.keyboard_arrow_right),
-          )
-        ),
+            child: ListTile(
+          leading: Icon(Icons.accessibility),
+          title: Text("Pottery"),
+          subtitle: Text(
+              "Within Generic Community Group  |  Last active 3 hours ago"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+        )),
       ],
     );
   }
@@ -61,45 +59,40 @@ class ClassesGroupsPage extends StatelessWidget {
     return ListView(
       children: const <Widget>[
         Card(
-          child: ListTile(
-            leading: Icon(Icons.accessibility),
-            title: Text("Provo Boyz"),
-            subtitle: Text("Last active 2 hours ago"),
-            trailing: Icon(Icons.keyboard_arrow_right),
-          )
-        ),
+            child: ListTile(
+          leading: Icon(Icons.accessibility),
+          title: Text("Provo Boyz"),
+          subtitle: Text("Last active 2 hours ago"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+        )),
         Card(
-          child: ListTile(
-            leading: Icon(Icons.accessibility),
-            title: Text("BYU Study Group"),
-            subtitle: Text("Last active 12 hours ago"),
-            trailing: Icon(Icons.keyboard_arrow_right),
-          )
-        ),
+            child: ListTile(
+          leading: Icon(Icons.accessibility),
+          title: Text("BYU Study Group"),
+          subtitle: Text("Last active 12 hours ago"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+        )),
         Card(
-          child: ListTile(
-            leading: Icon(Icons.accessibility),
-            title: Text("Generic Community"),
-            subtitle: Text("Last active 3 hours ago"),
-            trailing: Icon(Icons.keyboard_arrow_right),
-          )
-        ),
+            child: ListTile(
+          leading: Icon(Icons.accessibility),
+          title: Text("Generic Community"),
+          subtitle: Text("Last active 3 hours ago"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+        )),
         Card(
-          child: ListTile(
-            leading: Icon(Icons.accessibility),
-            title: Text("Soccer Moms"),
-            subtitle: Text("Last active 3 hours ago"),
-            trailing: Icon(Icons.keyboard_arrow_right),
-          )
-        ),
+            child: ListTile(
+          leading: Icon(Icons.accessibility),
+          title: Text("Soccer Moms"),
+          subtitle: Text("Last active 3 hours ago"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+        )),
         Card(
-          child: ListTile(
-            leading: Icon(Icons.accessibility),
-            title: Text("Provo Pickleballers"),
-            subtitle: Text("Last active 3 hours ago"),
-            trailing: Icon(Icons.keyboard_arrow_right),
-          )
-        ),
+            child: ListTile(
+          leading: Icon(Icons.accessibility),
+          title: Text("Provo Pickleballers"),
+          subtitle: Text("Last active 3 hours ago"),
+          trailing: Icon(Icons.keyboard_arrow_right),
+        )),
       ],
     );
   }

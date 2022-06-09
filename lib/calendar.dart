@@ -15,31 +15,52 @@ class DetailsRow extends StatelessWidget {
   final num weekEnd;
   final num date;
 
-  Column getContent() {
-    List<EventModel> events = getEventsOnDate(date);
-    if (events.isEmpty) {
-      return Column(children: const [Text('No events on this day')]);
-    }
-    List<Widget> list = <Widget>[];
-    events.forEach((event) {
-      list.add(Row(children: [Text(event.name + ' @ ' + event.time)]));
-    });
-    // return list;
-
-    return Column(children: list);
-    // return Column(children: [
-    //   Row(children: [Text('hello')]),
-    //   Row(children: [Text('world')])
-    // ]);
-    // for (var i = 0; i < events.length; i++) {
-    //   list.add(new Text(strings[i]));
-    // }
-    // return new Row(children: list);
-    // return Text(events[0].name);
-  }
-
   bool isVisible() {
     return weekStart <= date && date <= weekEnd;
+  }
+
+  List<Widget> getEventColumns() {
+    List<EventModel> events = getEventsOnDate(date);
+    if (events.isEmpty) {
+      return [
+        Column(children: const [Text('No events on this day')])
+      ];
+    }
+
+    List<Widget> eventCols = <Widget>[];
+    events.forEach((event) {
+      eventCols.add(Column(children: [
+        Text(
+          event.time,
+          style: TextStyle(
+              color: THEME_SECONDARY_DARKER,
+              fontWeight: FontWeight.w300,
+              fontSize: 14),
+        ),
+        Text(event.name,
+            style: TextStyle(
+                color: THEME_SECONDARY_DARKER,
+                fontWeight: FontWeight.w600,
+                fontSize: 14)),
+      ]));
+    });
+
+    return eventCols;
+
+    // return Column(children: [
+    //   Text(
+    //     '10:00 AM',
+    //     style: TextStyle(
+    //         color: THEME_SECONDARY_DARKER,
+    //         fontWeight: FontWeight.w300,
+    //         fontSize: 14),
+    //   ),
+    //   Text('Prod. Design',
+    //       style: TextStyle(
+    //           color: THEME_SECONDARY_DARKER,
+    //           fontWeight: FontWeight.w600,
+    //           fontSize: 14)),
+    // ]);
   }
 
   @override
@@ -48,10 +69,24 @@ class DetailsRow extends StatelessWidget {
 
     return Container(
         color: THEME_NAVBAR_SURFACE,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [getContent()],
-        ));
+        child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+            child: Column(mainAxisAlignment: MainAxisAlignment.start,
+                // crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                    Padding(
+                        padding: const EdgeInsets.all(4),
+                        child: Text('Tuesday, March 3',
+                            style: TextStyle(
+                                fontSize: 10, color: THEME_SECONDARY_DARKER)))
+                  ]),
+                  Container(
+                      margin: const EdgeInsets.all(10),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: getEventColumns()))
+                ])));
   }
 }
 
