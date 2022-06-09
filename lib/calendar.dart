@@ -28,22 +28,22 @@ class DetailsRow extends StatelessWidget {
     }
 
     List<Widget> eventCols = <Widget>[];
-    events.forEach((event) {
+    for (var event in events) {
       eventCols.add(Column(children: [
         Text(
           event.time,
-          style: TextStyle(
+          style: const TextStyle(
               color: THEME_SECONDARY_DARKER,
               fontWeight: FontWeight.w300,
               fontSize: 14),
         ),
         Text(event.name,
-            style: TextStyle(
+            style: const TextStyle(
                 color: THEME_SECONDARY_DARKER,
                 fontWeight: FontWeight.w600,
                 fontSize: 14)),
       ]));
-    });
+    }
 
     return eventCols;
 
@@ -77,8 +77,8 @@ class DetailsRow extends StatelessWidget {
                   Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                     Padding(
                         padding: const EdgeInsets.all(4),
-                        child: Text('Tuesday, March 3',
-                            style: TextStyle(
+                        child: Text('March ' + date.toString(),
+                            style: const TextStyle(
                                 fontSize: 10, color: THEME_SECONDARY_DARKER)))
                   ]),
                   Container(
