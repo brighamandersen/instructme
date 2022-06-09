@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instructme/models/event_model.dart';
+import 'package:instructme/utils/constants.dart';
 import 'package:instructme/utils/helpers.dart';
 import 'package:instructme/utils/theme.dart';
 
@@ -23,7 +24,8 @@ class DetailsRow extends StatelessWidget {
     List<EventModel> events = getEventsOnDate(date);
     if (events.isEmpty) {
       return [
-        Column(children: const [Text('No events on this day')])
+        Column(
+            children: const [Text('No events on this day', style: lightText)])
       ];
     }
 
@@ -32,35 +34,13 @@ class DetailsRow extends StatelessWidget {
       eventCols.add(Column(children: [
         Text(
           event.time,
-          style: const TextStyle(
-              color: THEME_SECONDARY_DARKER,
-              fontWeight: FontWeight.w300,
-              fontSize: 14),
+          style: lightText,
         ),
-        Text(event.name,
-            style: const TextStyle(
-                color: THEME_SECONDARY_DARKER,
-                fontWeight: FontWeight.w600,
-                fontSize: 14)),
+        Text(event.name, style: boldText),
       ]));
     }
 
     return eventCols;
-
-    // return Column(children: [
-    //   Text(
-    //     '10:00 AM',
-    //     style: TextStyle(
-    //         color: THEME_SECONDARY_DARKER,
-    //         fontWeight: FontWeight.w300,
-    //         fontSize: 14),
-    //   ),
-    //   Text('Prod. Design',
-    //       style: TextStyle(
-    //           color: THEME_SECONDARY_DARKER,
-    //           fontWeight: FontWeight.w600,
-    //           fontSize: 14)),
-    // ]);
   }
 
   @override
