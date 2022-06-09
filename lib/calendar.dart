@@ -71,22 +71,21 @@ class DetailsRow extends StatelessWidget {
         color: THEME_NAVBAR_SURFACE,
         child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-            child: Column(mainAxisAlignment: MainAxisAlignment.start,
-                // crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-                    Padding(
-                        padding: const EdgeInsets.all(4),
-                        child: Text('March ' + date.toString(),
-                            style: const TextStyle(
-                                fontSize: 10, color: THEME_SECONDARY_DARKER)))
-                  ]),
-                  Container(
-                      margin: const EdgeInsets.all(10),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: getEventColumns()))
-                ])));
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+              Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                Padding(
+                    padding: const EdgeInsets.all(4),
+                    child: Text('March ' + date.toString(),
+                        style: const TextStyle(
+                            fontSize: 10, color: THEME_SECONDARY_DARKER)))
+              ]),
+              Container(
+                  margin: const EdgeInsets.all(10),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: getEventColumns()))
+            ])));
   }
 }
 
