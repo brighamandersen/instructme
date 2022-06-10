@@ -5,6 +5,7 @@ import 'package:instructme/dashboard.dart';
 import 'package:instructme/group.dart';
 import 'package:instructme/messages.dart';
 import 'package:instructme/notifications.dart';
+import 'package:instructme/old_calendar.dart';
 import 'package:instructme/profile.dart';
 import 'package:instructme/utils/theme.dart';
 
@@ -41,7 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
   static const List<Widget> _routesList = <Widget>[
-    CalendarPage(),
+    NewCalendarPage(),
+    // OldCalendarPage(),
     DashboardPage(),
     ClassesGroupsPage(),
     MessagesPage(),
