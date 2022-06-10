@@ -14,6 +14,7 @@ List<OldEventModel> ALL_OLD_CAL_EVENTS = [
 ];
 
 List<EventModel> ALL_EVENTS = [
+  // EventModel('TODAYYYY', DateTime(2022, 6, 10, 4)),
   EventModel('Production Design', DateTime(2022, 6, 11, 4)),
   EventModel('Acting', DateTime(2022, 6, 11, 10)),
   EventModel('Cinematography', DateTime(2022, 6, 11, 17)),

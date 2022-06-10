@@ -68,7 +68,10 @@ class _NewCalendarPageState extends State<NewCalendarPage> {
           onDateSelected: onDateSelected,
           monthColor: THEME_SECONDARY_DARKEST,
           dayColor: THEME_SECONDARY_DARKER,
+          dotsColor: THEME_PRIMARY_VERY_LIGHT,
           activeBackgroundDayColor: THEME_PRIMARY,
+          selectableDayPredicate: (date) =>
+              isSameDate(now, date) || getEventsOnDate(date).isNotEmpty,
         ),
       ),
       SizedBox(
