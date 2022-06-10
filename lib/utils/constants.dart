@@ -17,7 +17,7 @@ List<EventModel> ALL_EVENTS = [
   EventModel('Production Design', DateTime(2022, 6, 11, 4)),
   EventModel('Acting', DateTime(2022, 6, 11, 10)),
   EventModel('Cinematography', DateTime(2022, 6, 11, 17)),
-  EventModel('Cinematography', DateTime(2022, 6, 11, 18)),
+  EventModel('Vocal Performance', DateTime(2022, 6, 11, 18)),
   EventModel('Sound', DateTime(2022, 6, 12, 4)),
   EventModel('Stage Design', DateTime(2022, 6, 12, 14)),
   EventModel('Lighting', DateTime(2022, 6, 27, 23)),

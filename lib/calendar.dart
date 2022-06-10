@@ -33,7 +33,7 @@ class _NewCalendarPageState extends State<NewCalendarPage> {
         // Don't add divider at very beginning
         eventCols.add(
           const SizedBox(
-              height: 40,
+              height: 30,
               child: VerticalDivider(
                 color: THEME_VARIANT_LIGHT,
                 thickness: 2,
