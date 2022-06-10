@@ -5,7 +5,7 @@ import 'package:instructme/dashboard.dart';
 import 'package:instructme/group.dart';
 import 'package:instructme/messages.dart';
 import 'package:instructme/notifications.dart';
-import 'package:instructme/old_calendar.dart';
+// import 'package:instructme/old_calendar.dart';
 import 'package:instructme/profile.dart';
 import 'package:instructme/utils/theme.dart';
 
@@ -22,8 +22,8 @@ class InstructMeApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'instruct.me',
       theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
+          primaryColor: THEME_PRIMARY,
+          appBarTheme: const AppBarTheme(backgroundColor: THEME_PRIMARY)),
       home: const MyHomePage(title: 'instruct.me'),
     );
   }

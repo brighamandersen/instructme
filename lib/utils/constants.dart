@@ -15,15 +15,19 @@ List<OldEventModel> ALL_OLD_CAL_EVENTS = [
 
 List<EventModel> ALL_EVENTS = [
   EventModel('Production Design', DateTime(2022, 6, 11, 4)),
-  EventModel('Acting', DateTime(2022, 6, 11, 4)),
-  EventModel('Cinematography', DateTime(2022, 6, 11, 4)),
+  EventModel('Acting', DateTime(2022, 6, 11, 10)),
+  EventModel('Cinematography', DateTime(2022, 6, 11, 17)),
+  EventModel('Cinematography', DateTime(2022, 6, 11, 18)),
   EventModel('Sound', DateTime(2022, 6, 12, 4)),
-  EventModel('Stage Design', DateTime(2022, 6, 12, 4)),
-  EventModel('Lighting', DateTime(2022, 6, 12, 4)),
+  EventModel('Stage Design', DateTime(2022, 6, 12, 14)),
+  EventModel('Lighting', DateTime(2022, 6, 27, 23)),
 ];
 
 const lightText = TextStyle(
-    color: THEME_SECONDARY_DARKER, fontWeight: FontWeight.w300, fontSize: 14);
+  color: THEME_SECONDARY_DARKER,
+  fontWeight: FontWeight.w300,
+  fontSize: 14,
+);
 
 const boldText = TextStyle(
     color: THEME_SECONDARY_DARKER, fontWeight: FontWeight.w600, fontSize: 14);

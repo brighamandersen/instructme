@@ -24,14 +24,22 @@ class _NewCalendarPageState extends State<NewCalendarPage> {
   List<Widget> getEventColumns(DateTime date) {
     List<EventModel> events = getEventsOnDate(date);
     if (events.isEmpty) {
-      return [
-        Column(
-            children: const [Text('No events on this day', style: lightText)])
-      ];
+      return [const Text('No events on this day', style: lightText)];
     }
 
     List<Widget> eventCols = <Widget>[];
     for (var event in events) {
+      if (eventCols.isNotEmpty) {
+        // Don't add divider at very beginning
+        eventCols.add(
+          const SizedBox(
+              height: 40,
+              child: VerticalDivider(
+                color: THEME_VARIANT_LIGHT,
+                thickness: 2,
+              )),
+        );
+      }
       eventCols.add(Column(children: [
         Text(
           dateAsHoursAndMin(event.datetime),
@@ -51,17 +59,25 @@ class _NewCalendarPageState extends State<NewCalendarPage> {
     DateTime oneYearLater = DateTime(now.year + 1, now.month + 1, 0);
 
     return (Column(children: [
-      CalendarTimeline(
-        initialDate: _activeDate,
-        firstDate: firstOfMonth,
-        lastDate: oneYearLater,
-        onDateSelected: onDateSelected,
-      ),
       Container(
-          margin: const EdgeInsets.all(10),
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: getEventColumns(_activeDate))),
+        color: THEME_PRIMARY_VERY_LIGHT,
+        child: CalendarTimeline(
+          initialDate: _activeDate,
+          firstDate: firstOfMonth,
+          lastDate: oneYearLater,
+          onDateSelected: onDateSelected,
+          monthColor: THEME_SECONDARY_DARKEST,
+          dayColor: THEME_SECONDARY_DARKER,
+          activeBackgroundDayColor: THEME_PRIMARY,
+        ),
+      ),
+      SizedBox(
+          width: double.infinity,
+          child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Container(
+                  padding: const EdgeInsets.all(10),
+                  child: Row(children: getEventColumns(_activeDate)))))
     ]));
   }
 }
