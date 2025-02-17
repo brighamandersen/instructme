@@ -25,8 +25,8 @@ class DetailsRow extends StatelessWidget {
     List<OldEventModel> events = getOldCalEventsOnDate(date);
     if (events.isEmpty) {
       return [
-        Column(
-            children: const [Text('No events on this day', style: lightText)])
+        const Column(
+            children: [Text('No events on this day', style: lightText)])
       ];
     }
 
