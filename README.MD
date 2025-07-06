@@ -1,1 +1,3 @@
-instructme - Uniting communities through localized classes
+# Instruct.me
+
+Uniting communities through localized classes
