@@ -2,7 +2,7 @@
 
 Uniting communities through localized classes
 
-In BYU MSB 494 On Campus Internship class, I did an internship for Instruct.me, a small company looking to implement their idea of using localized classes to unite communities (example: Welder down the street wants to teach his trade to those interested). My team of 4 and I then locked in the next few months to create designs and bring the owner's idea to life. We leveraged Figma to create high fidelity mobile and then desktop app prototypes.
+In BYU MSB 494 On Campus Internship class, I did an internship for Instruct.me, a small company looking to implement their idea of using localized classes to unite communities (example: Welder down the street wants to teach his trade to those interested). My team of 4 and I then locked in the next few months to create designs and bring the owner's idea to life. We leveraged Figma to create high fidelity mobile and then desktop app prototypes. The app code you see in the repo was only the beginning of our creation of the app as we spent most of our time throughout the semester really nailing down the designs.
 
 ![Demo Screenshot 1](./README-assets/README-demo-screenshot1.webp)
 
