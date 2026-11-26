@@ -12,6 +12,8 @@ In BYU MSB 494 On Campus Internship class, I did an internship for Instruct.me, 
 
 [Figma Designs](https://www.figma.com/design/Uic9alimQe4LIIVBrR7XMF/instructme)
 
+[Figma Prototypes[(https://www.figma.com/proto/Uic9alimQe4LIIVBrR7XMF/instructme)
+
 See [this PDF](./README-assets/README-mobile-designs-user-guide.pdf) for the entirety of the mobile app design screenshots as well as a user guide.
 
 See [this PDF](./README-assets/README-desktop-designs.pdf) for the desktop web app design screenshots (designs were made mobile-first then later adapted to the web).
