@@ -10,7 +10,7 @@ In BYU MSB 494 On Campus Internship class, I did an internship for Instruct.me, 
 
 ![Demo Screenshot 3](./README-assets/README-demo-screenshot3.webp)
 
-[Mobile Design Screenshots + User Guide](./README-assets/README-mobile-designs-user-guide.pdf)
+[⭐ Mobile Design Screenshots + User Guide](./README-assets/README-mobile-designs-user-guide.pdf)
 
 [Figma Mobile Prototype](https://www.figma.com/proto/Uic9alimQe4LIIVBrR7XMF/instructme?node-id=1250-11188)
 
