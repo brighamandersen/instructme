@@ -12,11 +12,13 @@ In BYU MSB 494 On Campus Internship class, I did an internship for Instruct.me, 
 
 [Mobile Design Screenshots + User Guide](./README-assets/README-mobile-designs-user-guide.pdf)
 
+[Figma Mobile Prototype](https://www.figma.com/proto/Uic9alimQe4LIIVBrR7XMF/instructme?node-id=1250-11188)
+
 [Desktop App Design Screenshots](./README-assets/README-desktop-designs.pdf) (designs were made mobile-first then later adapted to the web)
 
-[Figma Designs](https://www.figma.com/design/Uic9alimQe4LIIVBrR7XMF/instructme)
+[Figma Desktop Prototype](https://www.figma.com/proto/Uic9alimQe4LIIVBrR7XMF/instructme?node-id=375-889)
 
-[Figma Prototypes](https://www.figma.com/proto/Uic9alimQe4LIIVBrR7XMF/instructme)
+[Figma Designs](https://www.figma.com/design/Uic9alimQe4LIIVBrR7XMF/instructme)
 
 [Midterm Presentation PDF](./README-assets/README-midterm-presentation.pdf)
 
